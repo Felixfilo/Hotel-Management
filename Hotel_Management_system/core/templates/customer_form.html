@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Create Customer{% endblock %}
+
+{% block content %}
+<div class="container mt-4" style="background-color: #1a202c; color: #ffffff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+    <h1 class="mb-4" style="color: #9B4F96; text-shadow: 0 0 10px rgba(155, 79, 150, 0.5);">Create Customer</h1>
+    <form method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="{{ form.name.id_for_label }}" class="form-label" style="color: #39FF14; text-shadow: 0 0 5px rgba(57, 255, 20, 0.3);">Name</label>
+            {{ form.name }}
+            {% if form.name.errors %}
+                <div class="invalid-feedback" style="color: #ff4444;">
+                    {{ form.name.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <label for="{{ form.phone.id_for_label }}" class="form-label" style="color: #39FF14; text-shadow: 0 0 5px rgba(57, 255, 20, 0.3);">Phone</label>
+            {{ form.phone }}
+            {% if form.phone.errors %}
+                <div class="invalid-feedback" style="color: #ff4444;">
+                    {{ form.phone.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <label for="{{ form.email.id_for_label }}" class="form-label" style="color: #39FF14; text-shadow: 0 0 5px rgba(57, 255, 20, 0.3);">Email</label>
+            {{ form.email }}
+            {% if form.email.errors %}
+                <div class="invalid-feedback" style="color: #ff4444;">
+                    {{ form.email.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary" style="background-color: #39FF14; border-color: #39FF14; color: #1a202c; font-weight: bold; margin-right: 10px; text-shadow: none; box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);">Create Customer</button>
+        <a href="{% url 'customer_list' %}" class="btn btn-secondary" style="background-color: #9B4F96; border-color: #9B4F96; color: #ffffff; box-shadow: 0 0 10px rgba(155, 79, 150, 0.5);">Cancel</a>
+    </form>
+</div>
+
+<style>
+    body {
+        background-color: #121826;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        background-color: #2d3748;
+        border: 1px solid #4a5568;
+        color: #ffffff;
+        padding: 0.5rem;
+        border-radius: 4px;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+        background-color: #2d3748;
+        border-color: #39FF14;
+        box-shadow: 0 0 0 0.2rem rgba(57, 255, 20, 0.25);
+        color: #ffffff;
+    }
+
+    .btn-primary {
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #32ff00;
+        border-color: #32ff00;
+        color: #1a202c;
+        box-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: #8a3b85;
+        border-color: #8a3b85;
+        color: #ffffff;
+        box-shadow: 0 0 15px rgba(155, 79, 150, 0.7);
+        transform: translateY(-1px);
+    }
+
+    .container {
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(74, 85, 104, 0.2);
+    }
+
+    .invalid-feedback {
+        text-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+    }
+</style>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+{% endblock %}

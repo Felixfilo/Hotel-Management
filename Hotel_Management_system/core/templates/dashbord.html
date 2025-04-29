@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div style="background-color: #1a202c; color: #ffffff; min-height: 100vh; padding: 20px;">
+        <h1 style="color: #9B4F96; text-shadow: 0 0 10px rgba(155, 79, 150, 0.5);">Dashboard</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="background-color: #2d3748; border: 1px solid #39FF14; box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #9B4F96;">Rooms</h5>
+                        <p class="card-text" style="color: #ffffff;">Total Rooms: {{ rooms.count }}</p>
+                        <a href="{% url 'room_list' %}" class="btn" style="background-color: #39FF14; color: #1a202c; font-weight: bold; transition: all 0.3s ease; border: none;">
+                            Manage Rooms
+                        </a>
+                    </div>
+                </div>a
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="background-color: #2d3748; border: 1px solid #39FF14; box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #9B4F96;">Reservations</h5>
+                        <p class="card-text" style="color: #ffffff;">Total Reservations: {{ reservations.count }}</p>
+                        <a href="{% url 'reservation_list' %}" class="btn" style="background-color: #39FF14; color: #1a202c; font-weight: bold; transition: all 0.3s ease; border: none;">
+                            Manage Reservations
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="background-color: #2d3748; border: 1px solid #39FF14; box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #9B4F96;">Customers</h5>
+                        <p class="card-text" style="color: #ffffff;">Total Customers: {{ customers.count }}</p>
+                        <a href="{% url 'customer_list' %}" class="btn" style="background-color: #39FF14; color: #1a202c; font-weight: bold; transition: all 0.3s ease; border: none;">
+                            Manage Customers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .btn:hover {
+            background-color: #9B4F96 !important;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(155, 79, 150, 0.4);
+        }
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+{% endblock %}

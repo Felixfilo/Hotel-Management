@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Rooms{% endblock %}
+
+{% block content %}
+    <div style="background-color: #1a202c; color: #ffffff; padding: 20px;">
+        <h1 style="color: #9B4F96; margin-bottom: 1.5rem; font-weight: bold;">Rooms</h1>
+        <table class="table" style="background-color: #1F2937; color: #ffffff; border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr style="background-color: #2D3748;">
+                    <th style="color: #39FF14; border-color: #4A5568; padding: 12px;">Number</th>
+                    <th style="color: #39FF14; border-color: #4A5568; padding: 12px;">Type</th>
+                    <th style="color: #39FF14; border-color: #4A5568; padding: 12px;">Price</th>
+                    <th style="color: #39FF14; border-color: #4A5568; padding: 12px;">Status</th>
+                    <th style="color: #39FF14; border-color: #4A5568; padding: 12px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for room in rooms %}
+                    <tr style="{% cycle 'background-color: #2D3748' 'background-color: #1a202c' %}; border-color: #4A5568;">
+                        <td style="border-color: #4A5568; padding: 12px;">{{ room.number }}</td>
+                        <td style="border-color: #4A5568; padding: 12px;">{{ room.get_type_display }}</td>
+                        <td style="border-color: #4A5568; padding: 12px;">${{ room.price }}</td>
+                        <td style="border-color: #4A5568; padding: 12px;">
+                            <span style="color: {% if room.status == 'available' %}#39FF14{% else %}#9B4F96{% endif %}; font-weight: 500;">
+                                {{ room.get_status_display }}
+                            </span>
+                        </td>
+                        <td style="border-color: #4A5568; padding: 12px;">
+                            <a href="{% url 'room_detail' room.pk %}" 
+                               class="btn btn-sm" 
+                               style="background-color: #39FF14; 
+                                      color: #1a202c; 
+                                      border: none; 
+                                      padding: 6px 12px;
+                                      border-radius: 4px;
+                                      font-weight: 500;
+                                      text-decoration: none;
+                                      transition: all 0.3s ease;
+                                      display: inline-block;">
+                                Edit
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

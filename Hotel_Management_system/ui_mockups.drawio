@@ -1,0 +1,139 @@
+<mxfile host="65bd71144e">
+    <diagram name="Customer Interface" id="customer-interface">
+        <mxGraphModel dx="791" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" background="#1A1A1A" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="1020" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Hotel Logo" style="text;html=1;strokeColor=none;fillColor=#333333;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="55" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Home" style="text;html=1;strokeColor=none;fillColor=#333333;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="55" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Rooms" style="text;html=1;strokeColor=none;fillColor=#333333;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="55" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="My Reservations" style="text;html=1;strokeColor=none;fillColor=#333333;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="55" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Login" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#d6d8db;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="1020" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Check-in Date" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="150" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Check-out Date" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="150" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Room Type" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="150" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#006bff;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="150" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#e0e0e0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="240" width="320" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Room Image" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="260" width="280" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Single Room" style="text;html=1;strokeColor=none;fillColor=#333333;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="390" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="$100/night" style="text;html=1;strokeColor=none;fillColor=#333333;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="390" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Book Now" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#333333;strokeColor=#28a745;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="420" width="100" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Admin Panel" id="admin-panel">
+        <mxGraphModel dx="1422" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <!-- Admin Navigation -->
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#343a40;strokeColor=#343a40;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="240" height="770" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Admin Dashboard" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="60" y="60" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Dashboard" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Rooms Management" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="160" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Reservations" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="200" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Customers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="240" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Reports" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="280" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <!-- Main Content Area -->
+                <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#d6d8db;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="40" width="760" height="770" as="geometry"/>
+                </mxCell>
+                <!-- Dashboard Stats -->
+                <mxCell id="10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e0e0e0;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="60" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Total Rooms" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="340" y="80" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="100" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="110" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e0e0e0;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="60" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Available Rooms" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="580" y="80" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="85" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="110" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e0e0e0;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="60" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Today's Reservations" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="820" y="80" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="15" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="110" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <!-- Recent Reservations Table -->
+                <mxCell id="19" value="Recent Reservations" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="320" y="180" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e0e0e0;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="220" width="700" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Customer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="340" y="240" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Room" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="480" y="240" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Check-in" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="620" y="240" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Status" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="760" y="240" width="100" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Edit Room{% endblock %}
+
+{% block content %}
+<div style="background-color: #1a202c; color: #ffffff; padding: 2rem; min-height: 100vh;">
+    <h1 style="color: #9B4F96; margin-bottom: 2rem;">Edit Room</h1>
+    <form method="post" style="background-color: #2d3748; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        {% csrf_token %}
+        <div style="margin-bottom: 1.5rem;">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" style="background-color: #39FF14; color: #000000; border: none; padding: 0.5rem 1.5rem; border-radius: 4px; font-weight: bold; margin-right: 1rem; cursor: pointer; transition: all 0.3s ease;">Save</button>
+        <a href="{% url 'room_list' %}" style="background-color: #9B4F96; color: #ffffff; border: none; padding: 0.5rem 1.5rem; border-radius: 4px; text-decoration: none; display: inline-block; transition: all 0.3s ease;">Cancel</a>
+    </form>
+</div>
+
+<style>
+    form p {
+        margin-bottom: 1rem;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form select,
+    form textarea {
+        background-color: #2d3748;
+        border: 1px solid #4a5568;
+        color: #ffffff;
+        padding: 0.5rem;
+        border-radius: 4px;
+        width: 100%;
+    }
+    form input[type="text"]:focus,
+    form input[type="number"]:focus,
+    form select:focus,
+    form textarea:focus {
+        border-color: #39FF14;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(57, 255, 20, 0.2);
+    }
+    form label {
+        color: #e2e8f0;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(57, 255, 20, 0.3);
+    }
+    a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(155, 79, 150, 0.3);
+    }
+</style>
+{% endblock %}

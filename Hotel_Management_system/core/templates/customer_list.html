@@ -1,0 +1,99 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Customers{% endblock %}
+
+{% block content %}
+<div class="container mt-4" style="background-color: #1a202c; color: #ffffff;">
+    <h1 class="mb-4" style="color: #9B4F96;">Customers</h1>
+    <a href="{% url 'customer_create' %}" class="btn mb-3" style="background-color: #39FF14; color: #1a202c; font-weight: bold; transition: all 0.3s ease;">Create Customer</a>
+    <table class="table">
+        <thead>
+            <tr style="background-color: #2d3748; color: #9B4F96;">
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+                <tr style="background-color: {% cycle '#1a202c' '#2d3748' %}; color: #ffffff;">
+                    <td>{{ customer.name }}</td>
+                    <td>{{ customer.phone }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger delete-customer" data-customer-id="{{ customer.pk }}" style="background-color: #FF3131; color: #ffffff; font-weight: bold; transition: all 0.3s ease;">Delete</button>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr style="background-color: #1a202c; color: #ffffff;">
+                    <td colspan="4">No customers found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .btn:hover {
+        background-color: #9B4F96 !important;
+        color: #ffffff !important;
+    }
+    .table {
+        border-color: #2d3748;
+    }
+    .table td, .table th {
+        border-color: #2d3748;
+    }
+    tr:hover {
+        background-color: #2d3748 !important;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const deleteButtons = document.querySelectorAll('.delete-customer');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const customerId = this.getAttribute('data-customer-id');
+            if (confirm('Are you sure you want to delete this customer?')) {
+                fetch(`/customers/${customerId}/delete/`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken'),
+                        'Content-Type': 'application/json'
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        this.closest('tr').remove();
+                    } else {
+                        alert('Error deleting customer');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error deleting customer');
+                });
+            }
+        });
+    });
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>
+{% endblock %}

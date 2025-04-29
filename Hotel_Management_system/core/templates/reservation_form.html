@@ -1,0 +1,100 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Create Reservation{% endblock %}
+
+{% block content %}
+<div class="container mt-4" style="background-color: #1a202c; color: #ffffff; padding: 2rem; border-radius: 8px;">
+    <h1 class="mb-4" style="color: #9B4F96;">Create Reservation</h1>
+    <form method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="{{ form.customer_name.id_for_label }}" class="form-label" style="color: #39FF14;">Customer Name</label>
+            {{ form.customer_name }}
+            {% if form.customer_name.errors %}
+                <div class="invalid-feedback" style="color: #ff6b6b;">
+                    {{ form.customer_name.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <label for="{{ form.room.id_for_label }}" class="form-label" style="color: #39FF14;">Room</label>
+            {{ form.room }}
+            {% if form.room.errors %}
+                <div class="invalid-feedback" style="color: #ff6b6b;">
+                    {{ form.room.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <label for="{{ form.check_in.id_for_label }}" class="form-label" style="color: #39FF14;">Check-in Date</label>
+            {{ form.check_in }}
+            {% if form.check_in.errors %}
+                <div class="invalid-feedback" style="color: #ff6b6b;">
+                    {{ form.check_in.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <label for="{{ form.check_out.id_for_label }}" class="form-label" style="color: #39FF14;">Check-out Date</label>
+            {{ form.check_out }}
+            {% if form.check_out.errors %}
+                <div class="invalid-feedback" style="color: #ff6b6b;">
+                    {{ form.check_out.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <button type="submit" class="btn" style="background-color: #39FF14; color: #1a202c; border: none; margin-right: 10px; font-weight: bold;">Create Reservation</button>
+        <a href="{% url 'reservation_list' %}" class="btn" style="background-color: #9B4F96; color: #ffffff; border: none;">Cancel</a>
+    </form>
+</div>
+
+<style>
+    input[type="text"], input[type="date"], select {
+        background-color: #2d3748 !important;
+        border: 1px solid #4a5568 !important;
+        color: #ffffff !important;
+        border-radius: 4px !important;
+    }
+    
+    input[type="text"]:focus, input[type="date"]:focus, select:focus {
+        background-color: #2d3748 !important;
+        border-color: #39FF14 !important;
+        box-shadow: 0 0 0 0.2rem rgba(57, 255, 20, 0.25) !important;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+        transition: all 0.2s;
+    }
+
+    .form-control::placeholder {
+        color: #718096 !important;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+{% endblock %}
